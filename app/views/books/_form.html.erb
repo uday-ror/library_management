@@ -1,0 +1,26 @@
+<%#=form_with model: [:admin, @plan] do |form| %>
+<%= form_tag(subscription_plan_books_path)%>
+
+<%= f.radio_button%>
+
+  <!-- <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :detail %><br>
+    <%= form.text_area :detail%>
+  </div>
+
+  <div>
+    <%= form.label :amount %><br>
+    <%= form.text_area :amount %>
+  </div> 
+ -->
+  <%#= radio_button_tag 'gender', 'plan%'%><%= plan.name%>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %> 

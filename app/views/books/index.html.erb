@@ -1,0 +1,19 @@
+<h1>Welcome user panel</h1>
+
+<h1>Books</h1>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      
+ <%= link_to book.title, book_path(book.id)%>
+    </li>
+  <% end %>
+</ul>
+
+
+
+
+
+<%= link_to 'log out', destroy_secure_session_path, method: :delete %>
+	

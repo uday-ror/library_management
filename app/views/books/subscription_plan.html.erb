@@ -1,0 +1,74 @@
+<h1>Subscription plan</h1>
+    <%= form_with model: @book do |f|%>
+    <% @plans.each do |plane|%>
+    <% f.radio_button :plane_id, plane.id %><%= plane.name %>
+    <% end %>
+  <div>
+    <%= f.submit "Save_book" %>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#=================================================
+
+  <%#= form_tag("/subscribe_plan", method: "get") do %>
+
+
+  <%#= form_tag(update_subscription_plane_book_path) do %>
+ <!-- <ul>
+  <%# @plans.each do |plan| %>
+    <li>
+
+        <%#= radio_button_tag 'gender', 'plan'%><%= plane.home%>
+                                                                      <%#=  link_to plan.name, admin_plans_path %>
+    </li>
+                                                                                  <%#= submit_tag("Search") %>
+  <%# end %>
+ </ul> -->
+
+
+<%#= buton_tag("Update  Subscription")%>
+ <%# end %>
+
+#=================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%#= form_for [:admin, @plan] do |f| %>
+  <%#= f.select :book_id, Book.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
+  <%#= f.submit %>
+<%# end %>
+
+
+

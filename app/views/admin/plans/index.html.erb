@@ -1,0 +1,13 @@
+<h1>Subscription</h1>
+
+<ul>
+  <% @plans.each do |plan| %>
+    <li>
+      <%= link_to plan.name %>
+    </li>
+  <% end %>
+</ul>
+
+
+
+<%#= link_to "New plan", new_plan_path %> 

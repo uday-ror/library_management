@@ -1,0 +1,13 @@
+<h1>Welcome User</h1>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <a href="/books/<%= book.id %>">
+        <%= book.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'log out', destroy_secure_session_path, method: :delete %>
+	

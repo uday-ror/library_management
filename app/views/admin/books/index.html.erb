@@ -1,0 +1,24 @@
+<h1>Welcome Admin</h1>
+
+<ul>
+ 
+  <% @books.each do |book| %>
+    <li>
+
+<%= link_to book.title, admin_book_path(book.id)%>
+
+   
+    </li>
+  <% end %>
+</ul>
+
+
+
+<%= link_to 'New book', new_admin_book_path%>
+
+<%= link_to 'New plan', new_admin_plan_path%>
+
+<%= link_to 'my plan', admin_plans_path %>
+
+<%= link_to 'log out', destroy_secure_session_path, method: :delete %>
+	

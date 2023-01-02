@@ -1,0 +1,22 @@
+<%= form_with model: [:admin, @plan] do |form| %>
+>
+
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :detail %><br>
+    <%= form.text_area :detail%>
+  </div>
+
+  <div>
+    <%= form.label :amount %><br>
+    <%= form.text_area :amount %>
+  </div> 
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

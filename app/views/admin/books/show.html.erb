@@ -1,0 +1,20 @@
+<h1><%= @book.title %></h1>
+
+<p><%= @book.author %></p>
+
+
+<p><%= @book.discription %></p> 
+
+<img src="<%= (url_for(@book.image)) %>">
+
+<% if admin_signed_in? %>
+
+<ul>
+  <li><%= link_to "Edit", edit_admin_book_path(@book) %></li>
+  <li><%= link_to "Destroy", admin_book_path(@book),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
+<% else %>
+	 <%= link_to "home", root_path(@book) %>
+<% end %>	 
